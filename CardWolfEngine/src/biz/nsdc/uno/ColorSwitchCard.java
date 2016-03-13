@@ -3,6 +3,7 @@ package biz.nsdc.uno;
 /**
  * Not yet finished.
  * CSC 233
+ * 2-9-2016
  * @author Sam Kaessner
  */
 public class ColorSwitchCard extends SpecialUnoCard {
@@ -13,6 +14,9 @@ public class ColorSwitchCard extends SpecialUnoCard {
 		this.newColor = newColor;
 	}
 
+	/**
+	 * 
+	 */
 	@Override
 	public void doSpecial() {
 		

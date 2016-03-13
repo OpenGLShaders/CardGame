@@ -41,4 +41,9 @@ public class UnoEngine implements CardWolfEngine {
 		
 		System.out.println(engine.dealHand());
 	}
+
+	@Override
+	public <T extends Card> ImmutableList<T> shuffle(ImmutableList<T> cards) {
+		return null;
+	}
 }

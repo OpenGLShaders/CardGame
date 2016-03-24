@@ -5,7 +5,19 @@ import java.util.Random;
 
 import edu.frontrange.csc233.cardwolf.Card;
 
+/**
+ * A utility class for cardwolf games.
+ * 
+ * @author Sam Kaessner
+ */
 public class Util {
+	
+	/**
+	 * Shuffles the given cards and returns the shuffled list.
+	 * 
+	 * @param cards
+	 * @return
+	 */
 	public static <T extends Card> ArrayList<T> shuffle(ArrayList<T> cards) {
 		Random random = new Random();
 		for (int i = cards.size() - 1; i > 0; i--) {

@@ -1,6 +1,8 @@
 package biz.nsdc.util;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 import edu.frontrange.csc233.cardwolf.Card;
 
@@ -103,6 +105,14 @@ public class Deck<T extends Card> {
 	 */
 	public int count() {
 		return cards.size();
+	}
+	
+	/**
+	 * Returns the cards as an immutable list.
+	 * @return
+	 */
+	public List<T> getCards() {
+		return Collections.unmodifiableList(cards);
 	}
 	
 	@Override

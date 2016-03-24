@@ -11,15 +11,28 @@ import biz.nsdc.util.Deck;
  */
 public class UnoDeck extends Deck<UnoCard> {
 	
+	/**
+	 * Creates an empty deck that holds UnoCards.
+	 */
 	public UnoDeck() {
+		
+	}
+	
+	/**
+	 * Returns a deck of unshuffled uno cards.
+	 * 
+	 * @return
+	 */
+	public static UnoDeck getDefaultDeck() {
+		UnoDeck deck = new UnoDeck();
 		for (int i = 0; i < 10; i++) {
 			for (Color c : Color.values()) {
 				for (int j = 0; j < (i == 0 ? 1 : 2); j++) {
 					NumericalUnoCard card = new NumericalUnoCard(i, c);
-					putCardOnTop(card);
-					System.out.println(card);
+					deck.putCardOnTop(card);
 				} 
 			}
 		}
+		return deck;
 	}
 }

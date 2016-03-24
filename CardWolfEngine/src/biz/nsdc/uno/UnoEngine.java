@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import com.google.common.collect.ImmutableList;
 
+import biz.nsdc.util.Player;
 import edu.frontrange.csc233.cardwolf.Card;
 import edu.frontrange.csc233.cardwolf.CardWolfEngine;
 
@@ -17,7 +18,13 @@ import edu.frontrange.csc233.cardwolf.CardWolfEngine;
 public class UnoEngine implements CardWolfEngine {
 	private UnoDeck deck;
 	
+	/**
+	 * Will run a game of uno. 
+	 */
 	public UnoEngine() {
+		Player p1 = new Player("Sam", new UnoDeck());
+		Player p2 = new Player("Chris", new UnoDeck());
+		
 		deck = new UnoDeck();
 		deck.shuffle();
 	}
